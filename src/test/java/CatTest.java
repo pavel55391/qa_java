@@ -13,7 +13,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ClassCatTest {
+public class CatTest {
 
     @Mock
     Feline feline;
@@ -24,7 +24,7 @@ public class ClassCatTest {
     public void catTest() throws Exception {
         Feline predator = new Feline();
         Mockito.when(cat.getFood()).thenReturn(predator.eatMeat());
-        Assert.assertEquals(cat.getFood(), List.of("Животные", "Птицы", "Рыба"));
+        Assert.assertEquals(List.of("Животные", "Птицы", "Рыба"), cat.getFood());
     }
 
     @Test

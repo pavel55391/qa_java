@@ -17,7 +17,7 @@ public class LionSexTest {
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{index}: {0} имеет гриву {1}")
     public static Object[][] getSex() {
         return new Object[][]{
                 {"Самец", true},
@@ -29,6 +29,6 @@ public class LionSexTest {
     public void CheckGetSex() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion(sex, feline);
-        assertEquals(lion.doesHaveMane(), expected);
+        assertEquals(expected, lion.doesHaveMane());
     }
 }

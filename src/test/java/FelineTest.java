@@ -7,9 +7,9 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ClassFelineTest {
+public class FelineTest {
     @Mock
-    Feline feline;
+    private Feline feline;
 
     @Test
     public void getFamilyTest(){
@@ -27,6 +27,7 @@ public class ClassFelineTest {
     @Test
     public void getKittensTest() {
         Feline felineObj = new Feline();
-        Assert.assertEquals(felineObj.getKittens(), 1);
+        int expectedKittensCount = 1;
+        Assert.assertEquals(expectedKittensCount, felineObj.getKittens());
     }
 }

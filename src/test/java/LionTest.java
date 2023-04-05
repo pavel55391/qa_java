@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class ClassLionTest {
+public class LionTest {
     @Mock
     Feline felineMock;
     Lion lion;
@@ -26,18 +26,6 @@ public class ClassLionTest {
         lion.getFood();
         verify(felineMock, times(1)).getFood("Хищник");
     }
-
-    /*@Test  // тест параметризован
-    public void getKittensMaleMethodTest() throws Exception {
-        Lion lion = new Lion("Самка", felineMock);
-        assertFalse(lion.doesHaveMane());
-    }
-
-    @Test   // тест параметризован
-    public void getKittensFemaleMethodTest() throws Exception {
-        Lion lion = new Lion("Самец", felineMock);
-        assertTrue(lion.doesHaveMane());
-    }*/
 
     @Test
     public void getKittensExceptionMethodTest() {
